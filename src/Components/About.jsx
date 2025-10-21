@@ -35,7 +35,7 @@ export default function About() {
               user-focused solutions that blend cutting-edge technology with
               real human experiences
             </p>
-            <button className="btn btn-outline btn-accent rounded-3xl text-black">Read more</button>
+            <button className="btn btn-outline btn-success rounded-3xl text-black">Read more</button>
           </div>
 
           {/* Right Content - Stats Grid */}

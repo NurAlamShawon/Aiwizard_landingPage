@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import Doubledot from "./Doubledot";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
+import Rounded from "./Rounded";
 // ..
 AOS.init();
 
@@ -66,105 +67,102 @@ export default function AllReview() {
       className="relative inter lg:max-w-7xl mx-auto xl:py-20 py-10 xl:px-0 px-2"
       ref={ref}
     >
-      <div className="mb-22">
-        <div className="flex items-center justify-center gap-2 mb-2">
-          <Doubledot />
-          <p className="text-[#222325] font-medium xl:text-3xl text-lg leading-[24px]">
-            Reviews
-          </p>
+      <div className="flex justify-between items-center">
+        {/* info side */}
+        <div className="mb-22 ">
+          <div className="flex items-center gap-2">
+            <Rounded />
+            <span className="text-[#222325] xl:text-2xl text-xl font-medium">
+              Reviews
+            </span>
+          </div>
+          <h2 className="xl:text-4xl text-2xl bricolage xl:leading-[76px] leading-[50px]  font-semibold text-[#222325] text-start">
+            Trusted by Happy<br></br> Clients on Fiverr
+          </h2>
         </div>
-        <h2 className="xl:text-6xl text-2xl bricolage xl:leading-[76px] leading-[50px]  font-semibold text-[#222325] text-center">
-          Happy Customers on Fiverr
-        </h2>
+        {/* slider buttons on right */}
+        <div className="relative ">
+          <button
+            ref={prevRef}
+            disabled={isBeginning}
+            className={`absolute lg:right-[80px] right-[90px]   -translate-y-1/2 z-10 p-3 rounded-md transition-opacity bg-green-300 text-white ${
+              isBeginning ? "opacity-30 cursor-not-allowed" : "opacity-100"
+            }`}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-8"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 19.5 8.25 12l7.5-7.5"
+              />
+            </svg>
+          </button>
+          <button
+            ref={nextRef}
+            disabled={isEnd}
+            className={`absolute lg:right-0 right-2  -translate-y-1/2 z-10 p-3  rounded-md transition-opacity bg-green-300 text-white  ${
+              isEnd ? "opacity-30 cursor-not-allowed" : "opacity-100"
+            }`}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-8"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m8.25 4.5 7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
+
       {/* Custom navigation buttons */}
-      <button
-        ref={prevRef}
-        disabled={isBeginning}
-        className={`absolute xl:left-[-100px] left-0 top-2/3 -translate-y-1/2 z-10 p-3 rounded-full transition-opacity ${
-          isBeginning ? "opacity-30 cursor-not-allowed" : "opacity-100"
-        }`}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="size-10"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M15.75 19.5 8.25 12l7.5-7.5"
-          />
-        </svg>
-      </button>
-      <button
-        ref={nextRef}
-        disabled={isEnd}
-        className={`absolute xl:right-[-100px] right-0 top-2/3 -translate-y-1/2 z-10 p-3 rounded-full transition-opacity ${
-          isEnd ? "opacity-30 cursor-not-allowed" : "opacity-100"
-        }`}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="size-10"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="m8.25 4.5 7.5 7.5-7.5 7.5"
-          />
-        </svg>
-      </button>
 
       <Swiper
         modules={[Navigation]}
-        spaceBetween={50}
-        slidesPerView={3} // default for large screens
+        spaceBetween={10}
+        slidesPerView={3}
         breakpoints={{
-          0: {
-            slidesPerView: 1, // mobile devices
-            spaceBetween: 20,
-          },
-          640: {
-            slidesPerView: 2, // small tablets
-            spaceBetween: 30,
-          },
-          1024: {
-            slidesPerView: 3, // large screens
-            spaceBetween: 40,
-          },
+          0: { slidesPerView: 1, spaceBetween: 20 },
+          640: { slidesPerView: 2, spaceBetween: 30 },
+          1024: { slidesPerView: 3, spaceBetween: 30 },
         }}
         navigation={{
           prevEl: prevRef.current,
           nextEl: nextRef.current,
         }}
         onSwiper={(swiper) => {
-          // Attach buttons after mount
+          // Run this AFTER swiper and refs are both ready
           setTimeout(() => {
-            if (!swiper?.params?.navigation || !swiper.navigation) return;
             swiper.params.navigation.prevEl = prevRef.current;
             swiper.params.navigation.nextEl = nextRef.current;
+
+            swiper.navigation.destroy();
             swiper.navigation.init();
             swiper.navigation.update();
-          }, 100);
+          });
         }}
         onSlideChange={(swiper) => {
-          // Update button state
           setIsBeginning(swiper.isBeginning);
           setIsEnd(swiper.isEnd);
         }}
-        scrollbar={{ draggable: true }}
       >
         {testimonials.map((testimonial) => (
           <SwiperSlide key={testimonial.id}>
-            <div className=" relative lg:w-[300px] w-[250px] lg:h-[605px] h-[700px] mx-auto ">
+            <div className=" relative lg:w-[360px] w-[250px] lg:h-[605px] h-[700px] mx-auto border-2 rounded-2xl  border-gray-400">
               {/* Floating Quote Icon - completely outside clipped div */}
               <div
                 className={`w-14 h-14 ${testimonial.color} absolute top-[119px] -left-6 rounded-full flex items-center justify-center shadow-lg z-50`}

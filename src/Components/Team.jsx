@@ -49,8 +49,28 @@ export default function TeamSection() {
             Meet the Creative Minds<br></br> Behind the Magic
           </h2>
         </div>
-        <a href="#" className="btn btn-sm btn-success normal-case">
-          Visit Fiverr Profile
+        <a
+          href="https://www.fiverr.com/fusecode"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="xl:px-6 px-3 xl:py-3 py-1 bg-[#01C561] text-white font-medium rounded-full hover:bg-[#07a051] transition flex items-center justify-center mx-auto xl:gap-2 gap-1">
+            Hire Us on Fiverr{" "}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+              />
+            </svg>
+          </button>
         </a>
       </div>
 
@@ -68,7 +88,7 @@ export default function TeamSection() {
               <img
                 src={member.img}
                 alt={member.name}
-                className="w-60 h-60 object-cover rounded-full transition-all duration-500 group-hover:w-80 group-hover:h-80"
+                className="w-50 h-50 object-cover rounded-full transition-all duration-500 group-hover:w-70 group-hover:h-70"
               />
             </div>
             <div className="text-center mt-4">

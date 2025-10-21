@@ -11,6 +11,7 @@ import Doubledot from "./Doubledot";
 import { useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
+import Rounded from "./Rounded";
 // ..
 AOS.init();
 
@@ -29,7 +30,7 @@ export default function OurProvideService() {
       icon: <Globe className="h-6 w-6 text-[#01C561] group-hover:text-white" />,
       title: "AI-Driven Web App Development",
       description:
-        "I develop intelligent web applications that blend sleek design with AI capabilities such as chatbots, smart search, and process automation — delivering seamless, data-aware user experiences.",
+        "From concept to code, I design and build mobile apps that are fast, intuitive, and visually engaging. Every screen is crafted for usability, performance, and real-world impact.",
     },
     {
       icon: (
@@ -37,13 +38,13 @@ export default function OurProvideService() {
       ),
       title: "AI Chatbot & Automation Integration",
       description:
-        "Integrate GPT-powered assistants into your app or website. From customer support to lead engagement, I build chatbots that understand, respond, and automate intelligently.",
+        "From concept to code, I design and build mobile apps that are fast, intuitive, and visually engaging. Every screen is crafted for usability, performance, and real-world impact.",
     },
     {
       icon: <Code className="h-6 w-6 text-[#01C561] group-hover:text-white" />,
       title: "Full-Stack Web Development",
       description:
-        "I handle both frontend and backend to deliver secure, scalable, and high-performing web solutions. Perfect for startups or agencies looking for complete, end-to-end development.",
+        "From concept to code, I design and build mobile apps that are fast, intuitive, and visually engaging. Every screen is crafted for usability, performance, and real-world impact.",
     },
     {
       icon: (
@@ -51,7 +52,7 @@ export default function OurProvideService() {
       ),
       title: "Dashboard & Admin System Design",
       description:
-        "I design and develop smart dashboards and admin panels that turn complex data into actionable insights — with clean visuals, smooth navigation, and real-time analytics.",
+        "From concept to code, I design and build mobile apps that are fast, intuitive, and visually engaging. Every screen is crafted for usability, performance, and real-world impact.",
     },
     {
       icon: (
@@ -59,43 +60,41 @@ export default function OurProvideService() {
       ),
       title: "AI Consulting & Strategy",
       description:
-        "Unsure where to start with AI? I provide strategic guidance on integrating AI into your business model — identifying opportunities, designing solutions, and planning implementation efficiently.",
+        "From concept to code, I design and build mobile apps that are fast, intuitive, and visually engaging. Every screen is crafted for usability, performance, and real-world impact.",
     },
   ];
 
   return (
     <section
-      className="lg:max-w-screen-xl mx-auto inter xl:overflow-hidden xl:py-30 py-10 xl:px-0 px-2"
+      className="lg:max-w-7xl mx-auto inter xl:overflow-hidden xl:py-30 py-10 xl:px-0 px-2"
       ref={ref}
     >
-      <div>
+      <div className="xl:flex flex-row items-center justify-center gap-12">
         {/* Header */}
-        <div className="mb-12 xl:pl-0 pl-2">
-          <div className="mb-4 flex items-center">
-            <Doubledot />
-            <span className="xl:text-3xl text-2xl font-semibold text-[#222325]">
-              Our Services
+        <div className="mb-12 xl:pl-0 pl-2 space-y-6">
+          <div className="flex items-center gap-2">
+            <Rounded />
+            <span className="text-[#222325] xl:text-2xl text-xl font-medium">
+             Our Services
             </span>
           </div>
-          <h2 className="text-balance bricolage xl:text-6xl text-lg font-bold tracking-tight text-gray-900 ">
-            Make Your Projects Look More <br></br>Elegant And Stylish
+          <h2 className="text-balance bricolage xl:text-4xl text-lg font-semibold tracking-tight text-gray-900 ">
+          Elevate Your Projects with Timeless<br></br> Elegance and Style
           </h2>
+            <button className="btn btn-outline btn-success rounded-3xl text-black">View more</button>
         </div>
 
         {/* Services Grid */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:pl-2">
+        <div className="grid gap-6 lg:w-[640px] grid-cols-1 lg:grid-cols-2 xl:pl-2">
           {services.map((service, index) => (
             <div
-              className="relative"
+              className="relative "
               data-aos="fade-right"
               data-aos-offset="200"
               data-aos-easing="ease-in-sine"
               data-aos-duration="600"
               key={index}
             >
-              {/* Green bar */}
-              <div className="absolute -left-1.5 top-8 h-[89px] w-[8px] rounded-3xl bg-[#01C561]"></div>
-
               {/* Card */}
               <div
                 key={index}
@@ -111,34 +110,41 @@ export default function OurProvideService() {
                 >
                   {service.icon}
                 </div>
-                <h3 className="mb-3 text-lg font-semibold text-gray-900">
-                  {service.title}
-                </h3>
-                <p className="mb-4 text-sm leading-relaxed text-gray-600">
-                  {service.description}
-                </p>
-                <a
-                  href="https://www.fiverr.com/fusecode"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-sm font-medium text-emerald-600 transition-colors hover:text-emerald-700"
-                >
-                  Order Now
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="size-5"
+                <div className="h-52">
+                  <h3 className="mb-3 text-lg font-semibold text-gray-900">
+                    {service.title}
+                  </h3>
+                  <p className="mb-4 text-sm leading-relaxed text-gray-600">
+                    {service.description}
+                  </p>
+                </div>
+
+                <div className="flex justify-between">
+                  <p></p>
+                  <a
+                    href="https://www.fiverr.com/fusecode"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-sm font-medium text-emerald-600 transition-colors hover:text-emerald-700"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
-                    />
-                  </svg>
-                </a>
+                    <button className="text-black btn btn-outline rounded-3xl group-hover:bg-white">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.5}
+                        stroke="currentColor"
+                        className="size-5"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                        />
+                      </svg>
+                    </button>
+                  </a>
+                </div>
               </div>
             </div>
           ))}
