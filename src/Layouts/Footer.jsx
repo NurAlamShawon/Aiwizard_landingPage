@@ -7,14 +7,11 @@ export default function Footer() {
       <footer className="xl:flex flex-row items-center justify-between sm:footer-horizontal text-white   lg:max-w-screen-xl mx-auto">
         <aside className="xl:space-y-12 space-y-7 xl:pb-0 pb-6">
           <div className="flex items-end">
-            
-          <AgencyLogo/>
+            <AgencyLogo />
           </div>
-          <div className="bricolage">
-            <p className="font-bold xl:text-6xl text-2xl xl:leading-[81px] leading-[45px] text-white">
-              Get Started Today
-           <br></br>
-              Let's Talk
+          <div className="plus-jakarta">
+            <p className="font-semibold lg:text-2xl text-xl leading-[45px] text-white">
+              Let’s Get Started!<br></br>We’d love to hear from you.
             </p>
           </div>
           <a
@@ -22,7 +19,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button className="btn shadow-none border-none xl:px-9 px-5 xl:py-8 py-4 rounded-3xl bg-[#01C561] text-white  xl:text-xl text-md font-semibold">
+            <button className="btn shadow-none border-none lg:px-8 px-5 lg:py-7 py-4 rounded-3xl bg-[#01C561] text-white  xl:text-lg text-md font-semibold">
               Hire Us on Fiverr{" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -41,11 +38,13 @@ export default function Footer() {
             </button>
           </a>
         </aside>
-        <nav className="flex text-[#D9D9D9]">
+        <nav className="flex text-[#D9D9D9] inter">
           {/*  menu*/}
           <div>
             <ul className="space-y-2 mr-14">
-               <li className="xl:text-2xl text-lg  font-semibold text-white">Menu</li>
+              <li className="xl:text-2xl text-lg  font-semibold text-white">
+                Menu
+              </li>
               <li>
                 <a className=" xl:text-lg text-sm " href="#home">
                   Home
@@ -75,9 +74,11 @@ export default function Footer() {
             </ul>
           </div>
           {/* privacy */}
-          <div>
+          <div className="inter">
             <ul className="space-y-2">
-              <li className="xl:text-2xl text-lg l font-semibold text-white">Privacy</li>
+              <li className="xl:text-2xl text-lg l font-semibold text-white">
+                Privacy
+              </li>
               <li className="xl:text-lg text-sm ">Cookie Policy</li>
               <li className="xl:text-lg text-sm ">Term Of Services</li>
               <li className="xl:text-lg text-sm ">Policy Service</li>
@@ -85,7 +86,7 @@ export default function Footer() {
           </div>
         </nav>
       </footer>
-      <p className="xl:text-lg text-md text-[#D9D9D9] text-center pt-8 pb-16">
+      <p className="xl:text-lg text-md inter text-[#D9D9D9] text-center pt-8 pb-16">
         © 2025 - All rights Reserved by Fusecode
       </p>
     </div>

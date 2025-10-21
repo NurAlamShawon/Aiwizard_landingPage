@@ -35,14 +35,14 @@ const teamMembers = [
 
 export default function TeamSection() {
   return (
-    <section className=" py-20 px-4 lg:px-20 bg-white">
+    <section className=" py-20 px-4 lg:px-20 bg-white plus-jakarta">
       {/* Header */}
       <div className="flex lg:max-w-7xl mx-auto flex-col lg:flex-row items-center justify-between mb-12">
         <div className="mb-6 lg:mb-0">
           <div className="flex items-center gap-2">
             <Rounded />
             <span className="text-[#222325] xl:text-2xl text-xl font-medium">
-              About Us
+              Our Team
             </span>
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 leading-tight">
@@ -50,7 +50,7 @@ export default function TeamSection() {
           </h2>
         </div>
         <a
-          href="https://www.fiverr.com/fusecode"
+          href="https://www.fiverr.com/aiwizard_"
           target="_blank"
           rel="noopener noreferrer"
         >

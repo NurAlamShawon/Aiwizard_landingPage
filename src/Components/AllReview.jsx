@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import Doubledot from "./Doubledot";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import Rounded from "./Rounded";
@@ -16,42 +15,42 @@ export default function AllReview() {
   const testimonials = [
     {
       id: 1,
-      name: "frank_harri",
-      location: "United States",
+      name: "kyprianou",
+      location: "Canada",
       rating: 5,
-      text: '"I am beyond satisfied with the AI mobile app delivered by this seller. Every interaction was smooth and reassuring, making the development process stress-free. I highly recommend their services to anyone looking for a high-quality AI-powered mobile app."',
+      text: '"The AI auto responder app was delivered exactly as promised. Both screens work flawlessly, and the auto responses function smoothly. The seller was professional and easy to communicate with, making this a great experience from start to finish."',
       color: "bg-emerald-500",
     },
     {
       id: 2,
-      name: "richard_sus",
+      name: "ratmd7",
       location: "United States",
       rating: 5,
-      text: '"I’m always impressed by his work, this is not the first time I’ve hired him, and he delivered flawlessly once again. The AI content video generator app works seamlessly with all AI voice functionalities. I will choose him again for future projects."',
+      text: '"Very happy with the 3D video maker app, it has all the screens I needed, and the red and gray theme looks great. The preview and export functions work flawlessly. Very impressed and would definitely recommend. Good job."',
       color: "bg-red-500",
     },
     {
       id: 3,
-      name: "stephjustin",
-      location: "Cyprus",
+      name: "justin_b_lane",
+      location: "United States",
       rating: 5,
-      text: '"I am thoroughly impressed with the professionalism and technical expertise demonstrated by the developer. They delivered a sophisticated AI-powered job portal application featuring a modern and intuitive user interface. Thank you for your delivery."',
+      text: '"The AI Fitness Challenge App they developed is innovative, engaging, and flawlessly executed. Exceptional professionalism and quality throughout the project. Super satisfied with the work."',
       color: "bg-blue-500",
     },
     {
       id: 4,
-      name: "r_yusha",
+      name: "s_akter5",
       location: "United States",
       rating: 5,
-      text: '"I recently tried the new AI-powered voice assistant in this e-commerce app, and I’m genuinely impressed. It makes shopping so much faster and more intuitive. The assistant is smart, responsive, and understands my queries almost perfectly. It even remembers my preferences, making future shopping experiences smoother. Thank you."',
+      text: '"Great experience. The AI programming app was delivered on time with all features functioning flawlessly, including the chatbot tutor and auto-generated quizzes. Highly recommended."',
       color: "bg-emerald-500",
     },
     {
       id: 5,
-      name: "steven_kimberl",
+      name: "petter_a_jonh",
       location: "United States",
       rating: 5,
-      text: '"He did a fantastic job developing my AI-powered e-commerce app for my candy store. The 3 screens, integrated products, and chatbot features are all perfect. The pink and white theme looks playful and inviting. He exceeded my expectations. I absolutely recommend him and will surely work with him again."',
+      text: '"Fantastic service. My AI mobile app runs smoothly, with perfect functionality and a great user interface. Professional developer with deep knowledge of AI integration. Totally worth it."',
       color: "bg-red-500",
     },
   ];
@@ -64,7 +63,7 @@ export default function AllReview() {
 
   return (
     <div
-      className="relative inter lg:max-w-7xl mx-auto xl:py-20 py-10 xl:px-0 px-2"
+      className="relative plus-jakarta lg:max-w-7xl mx-auto xl:py-20 py-10 xl:px-0 px-2"
       ref={ref}
     >
       <div className="flex justify-between items-center">
@@ -76,7 +75,7 @@ export default function AllReview() {
               Reviews
             </span>
           </div>
-          <h2 className="xl:text-4xl text-2xl bricolage xl:leading-[76px] leading-[50px]  font-semibold text-[#222325] text-start">
+          <h2 className="xl:text-4xl text-2xl plus-jakarta xl:leading-[76px] leading-[50px]  font-semibold text-[#222325] text-start">
             Trusted by Happy<br></br> Clients on Fiverr
           </h2>
         </div>
@@ -133,6 +132,10 @@ export default function AllReview() {
 
       <Swiper
         modules={[Navigation]}
+         data-aos="fade-left"
+              data-aos-offset="200"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="600"
         spaceBetween={10}
         slidesPerView={3}
         breakpoints={{

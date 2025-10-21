@@ -71,17 +71,19 @@ export default function OurProvideService() {
     >
       <div className="xl:flex flex-row items-center justify-center gap-12">
         {/* Header */}
-        <div className="mb-12 xl:pl-0 pl-2 space-y-6">
+        <div className="mb-12 xl:pl-0 pl-2 space-y-6 plus-jakarta">
           <div className="flex items-center gap-2">
             <Rounded />
             <span className="text-[#222325] xl:text-2xl text-xl font-medium">
-             Our Services
+              Our Services
             </span>
           </div>
-          <h2 className="text-balance bricolage xl:text-4xl text-lg font-semibold tracking-tight text-gray-900 ">
-          Elevate Your Projects with Timeless<br></br> Elegance and Style
+          <h2 className="text-balance plus-jakarta xl:text-4xl text-lg font-semibold tracking-tight text-gray-900 ">
+            Elevate Your Projects with Timeless<br></br> Elegance and Style
           </h2>
-            <button className="btn btn-outline btn-success rounded-3xl text-black">View more</button>
+          <button className="btn btn-outline btn-success rounded-3xl text-black">
+            View more
+          </button>
         </div>
 
         {/* Services Grid */}
@@ -111,10 +113,10 @@ export default function OurProvideService() {
                   {service.icon}
                 </div>
                 <div className="h-52">
-                  <h3 className="mb-3 text-lg font-semibold text-gray-900">
+                  <h3 className="mb-3 plus-jakarta  text-lg font-semibold text-gray-900">
                     {service.title}
                   </h3>
-                  <p className="mb-4 text-sm leading-relaxed text-gray-600">
+                  <p className="mb-4 text-sm inter leading-relaxed text-gray-600">
                     {service.description}
                   </p>
                 </div>
@@ -122,7 +124,7 @@ export default function OurProvideService() {
                 <div className="flex justify-between">
                   <p></p>
                   <a
-                    href="https://www.fiverr.com/fusecode"
+                    href="https://www.fiverr.com/aiwizard_"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-sm font-medium text-emerald-600 transition-colors hover:text-emerald-700"

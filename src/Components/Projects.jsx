@@ -24,32 +24,39 @@ export default function Projects() {
   const projects = [
     {
       title: "Fashion E-Commerce App",
-      desc: "Your go-to platform for discovering and purchasing the latest trends.",
+      desc: "Clothing & Accessories Shopping App",
       img: "https://i.postimg.cc/VLhYk4xH/Frame-2147225541.png",
-      src: "https://www.fiverr.com/users/fusecode/portfolio/Njg1Mjc3MGQwYjkyYmQwMDAxMzhmZTcx",
+      src: "https://www.fiverr.com/aiwizard_",
     },
-    {
-      title: "Smart Messaging App with AI Chat Features",
-      desc: "Your go-to platform for discovering and purchasing the latest trends.",
-      img: "https://i.postimg.cc/wjDSYVgn/Frame-2147225541-1.png",
-      src: "https://www.fiverr.com/users/fusecode/portfolio/Njg1Mjc2NGQ2NGQ0OWMwMDAxYWFhYTM3",
-    },
+
     {
       title: "AI Food Delivery Website",
       desc: "Your go-to platform for discovering and purchasing the latest trends.",
       img: "https://i.postimg.cc/y80wCPsw-/Frame-2147225541-2.png",
-      src: "https://www.fiverr.com/users/fusecode/portfolio/NjgxODk4ZTcwNDlkMTAwMDAxOGJiYmQ3",
+      src: "https://www.fiverr.com/aiwizard_",
     },
     {
-      title: "AI-Based Smart Home App",
+      title: "Smart Messaging App with AI Chat Features",
+      desc: "Social Networking App with AI Features",
+      img: "https://i.postimg.cc/wjDSYVgn/Frame-2147225541-1.png",
+      src: "https://www.fiverr.com/aiwizard_",
+    },
+    {
+      title: "AI-Based Chatbot",
+      desc: "AI-Powered Chatbot Mobile App for Website Creation.",
+      img: "https://i.postimg.cc/8kJ4Q1PC/image.png",
+      src: "https://www.fiverr.com/aiwizard_",
+    },
+    {
+      title: "Video Editor Mobile App",
       desc: "Your go-to platform for discovering and purchasing the latest trends.",
       img: "https://i.postimg.cc/VkX3PRmW/Frame-2147225541-3.png",
-      src: "https://www.fiverr.com/users/fusecode/portfolio/Njg1MmQ5NzM2NGQ0OWMwMDAxYWFjOTdj",
+      src: "https://www.fiverr.com/aiwizard_",
     },
   ];
 
   return (
-    <section className="xl:py-20 py-10 xl:px-0 px-2 inter text-start">
+    <section className="xl:py-20 py-10 xl:px-0 px-2 plus-jakarta text-start">
       <div className="lg:w-full">
         {/* Section Header */}
         <div className="mb-22 lg:max-w-7xl mx-auto">
@@ -110,10 +117,14 @@ export default function Projects() {
             />
           </svg>
         </button>
-        <div className=" py-9 px-20 bg-[#EEEEEE]" data-aos="fade-left"
-                data-aos-offset="200"
-                data-aos-easing="ease-in-sine"
-                data-aos-duration="600" ref={ref}>
+        <div
+          className=" py-9 px-20 bg-[#EEEEEE]"
+          data-aos="fade-left"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="600"
+          ref={ref}
+        >
           <Swiper
             modules={[Navigation]}
             spaceBetween={30}
@@ -154,10 +165,10 @@ export default function Projects() {
                         <img
                           src={p.img}
                           alt={p.title}
-                          className="w-full h-[463px] object-cover transition-transform duration-300"
+                          className="w-full lg:h-[463px] h-[300px] object-cover transition-transform duration-300 group-hover:scale-110"
                         />
                       </div>
-                    
+
                       <div className="flex items-center justify-between">
                         {" "}
                         <div className="text-start">
@@ -166,7 +177,9 @@ export default function Projects() {
                             {" "}
                             {p.title}{" "}
                           </h3>{" "}
-                          <p className="text-gray-600 group-hover:text-white text-sm mb-4">{p.desc}</p>{" "}
+                          <p className="text-gray-600 group-hover:text-white text-sm mb-4">
+                            {p.desc}
+                          </p>{" "}
                         </div>{" "}
                         <div className="flex justify-end">
                           {" "}
@@ -181,10 +194,6 @@ export default function Projects() {
                 </a>
               </SwiperSlide>
             ))}
-
-            {/* Navigation Arrows
-  <div className="swiper-button-next absolute z-10 right-6 top-1/2 -translate-y-1/2 text-[#01C561] w-12 h-12" />
-  <div className="swiper-button-prev absolute left-6 top-1/2 -translate-y-1/2 text-[#01C561] w-12 h-12" /> */}
           </Swiper>
         </div>
       </div>
@@ -192,7 +201,7 @@ export default function Projects() {
       {/* View All Button */}
       <div className="mt-12">
         <a
-          href="https://www.fiverr.com/users/fusecode/portfolio/"
+          href="https://www.fiverr.com/aiwizard_"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -11,13 +11,13 @@ export default function About() {
   const ref = useRef();
   return (
     <section
-      className="relative inter lg:max-w-7xl mx-auto overflow-hidden xl:py-30 py-10 xl:px-0 px-2"
+      className="relative  lg:max-w-7xl mx-auto overflow-hidden xl:py-30 py-10 xl:px-0 px-2"
       ref={ref}
     >
       <div className="relative z-10 ">
         <div className="grid xl:grid-cols-2 grid-cols-1 gap-10 items-center">
           {/* Left Content */}
-          <div className="space-y-6">
+          <div className="space-y-6 plus-jakarta">
             <div className="flex items-center gap-2">
               <Rounded />
               <span className="text-[#222325] xl:text-2xl text-xl font-medium">
@@ -35,7 +35,17 @@ export default function About() {
               user-focused solutions that blend cutting-edge technology with
               real human experiences
             </p>
-            <button className="btn btn-outline btn-success rounded-3xl text-black">Read more</button>
+
+            <button className="btn btn-outline btn-success rounded-3xl text-black">
+              {" "}
+              <a
+                href="https://www.fiverr.com/aiwizard_"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Read more{" "}
+              </a>
+            </button>
           </div>
 
           {/* Right Content - Stats Grid */}

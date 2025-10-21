@@ -3,7 +3,7 @@ import React from "react";
 export default function AgencyLogo() {
   return (
     <div>
-      <a href="/" className="flex inter items-center">
+      <a href="/" className="flex inter items-center poppins">
         <img
           src="https://i.postimg.cc/bNDYJjbF/Vector.png"
           alt=""

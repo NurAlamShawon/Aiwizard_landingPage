@@ -3,7 +3,7 @@ import AgencyLogo from "./AgencyLogo";
 export default function Navbar() {
   return (
     <div className="navbar  lg:max-w-7xl mx-auto h-[80px]">
-      <div className="navbar-start w-1/4">
+      <div className="navbar-start w-1/4 ">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
@@ -24,7 +24,7 @@ export default function Navbar() {
           </div>
           <ul
             tabIndex="-1"
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow inter"
           >
             <li>
               <a className="font-medium text-lg text-[#222325]" href="#home">
@@ -65,7 +65,7 @@ export default function Navbar() {
       </div>
 
       <div className="navbar-end  w-3/4">
-        <ul className="menu menu-horizontal px-1 lg:flex hidden">
+        <ul className="menu menu-horizontal px-1 lg:flex hidden inter">
           <li>
             <a className="font-medium text-lg text-[#222325]" href="#home">
               Home
@@ -94,11 +94,11 @@ export default function Navbar() {
           </li>
         </ul>
         <a
-          href="https://www.fiverr.com/fusecode"
+          href="https://www.fiverr.com/aiwizard_"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className="xl:px-6 px-3 xl:py-3 py-1 bg-[#01C561] text-white font-medium rounded-full hover:bg-[#07a051] transition flex items-center justify-center mx-auto xl:gap-2 gap-1">
+          <button className="xl:px-6 plus-jakarta px-3 xl:py-3 py-1 bg-[#01C561] text-white font-medium rounded-full hover:bg-[#07a051] transition flex items-center justify-center mx-auto xl:gap-2 gap-1">
             Hire Us on Fiverr{" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -15,14 +15,14 @@ export default function HeroSection() {
     >
       {/* left side */}
       <div
-        className="lg:space-y-10   space-y-8"
+        className="lg:space-y-10  plus-jakarta  space-y-8"
         data-aos="fade-right"
         data-aos-offset="200"
         data-aos-easing="ease-in-sine"
         data-aos-duration="600"
       >
         <h1 className="  lg:max-w-[708px] font-semibold lg:text-5xl  text-2xl text-[#222325] lg:leading-[76px]  leading-[50px]">
-          <span className="text-[#1DBF73">AI-Powered</span> Apps & Websites that
+          <span className="text-[#1DBF73]">AI-Powered</span> Apps & Websites that
           DriveResults from Your Ideas
         </h1>
         <p className="font-medium lg:text-2xl text-lg lg:max-w-[708px] leading-[1.6]">
@@ -33,7 +33,7 @@ export default function HeroSection() {
           <button>
             <a
               className="xl:px-6 px-3 xl:py-3 py-1 bg-[#01C561] text-white font-medium rounded-full hover:bg-green-600 transition flex items-center justify-center mx-auto xl:gap-2 gap-1"
-              href="https://www.fiverr.com/fusecode"
+              href="https://www.fiverr.com/aiwizard_"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -55,7 +55,7 @@ export default function HeroSection() {
             </a>
           </button>
           <a
-            href="https://www.fiverr.com/users/fusecode/portfolio?roleIds="
+            href="https://www.fiverr.com/aiwizard_"
             className="underline underline-offset-8 ml-8 font-semibold xl:text-xl text-sm"
             target="_blank"
             rel="noopener noreferrer"
@@ -71,7 +71,7 @@ export default function HeroSection() {
         data-aos-easing="ease-in-sine"
         data-aos-duration="600"
         ref={imgRef}
-        className="xl:pt-0 pt-5"
+        className="xl:pt-0 pt-5 bricolage"
       >
         <div className="relative">
           <div className="relative">
@@ -82,29 +82,29 @@ export default function HeroSection() {
             />
           </div>
 
-          <div className="lg:w-sm w-60 lg:h-28 absolute left-1/2 -translate-x-1/2 bottom-8 space-y-3  backdrop-blur-md px-9 py-6 rounded-xl shadow-md">
+          <div className="lg:w-sm w-60 lg:h-28 absolute left-1/2 -translate-x-1/2 bottom-8 space-y-3  backdrop-blur-md px-11 py-6 rounded-xl shadow-md">
             <div className="flex items-center text-white">
               <div className="space-y-2 lg:pr-8 pr-3 ">
-                <h1 className="lg:text-2xl text-xl font-semibold   text-start">
+                <h1 className="lg:text-[22px] text-xl font-semibold   text-start">
                   Level 2
                 </h1>
-                <p className=" font-medium lg:text-sm text-xs text-start">
+                <p className=" font-medium  text-xs text-start">
                   Fiverr Seller
                 </p>
               </div>
               <div className="space-y-2 lg:px-8 px-3 border-l border-r border-gray-300">
-                <h1 className="lg:text-2xl text-xl font-semibold  text-start">
+                <h1 className="lg:text-[22px] text-xl font-semibold  text-start">
                   100+
                 </h1>
-                <p className=" font-medium lg:text-sm text-xs text-start">
+                <p className=" font-medium  text-xs text-start">
                   Reviews
                 </p>
               </div>
               <div className="space-y-2 lg:pl-8 pl-3">
-                <h1 className="lg:text-2xl text-xl font-semibold  text-start">
+                <h1 className="lg:text-[22px] text-xl font-semibold  text-start">
                   5.0
                 </h1>
-                <p className=" font-medium lg:text-sm text-xs text-start">
+                <p className=" font-medium  text-xs text-start">
                   Ratings
                 </p>
               </div>
