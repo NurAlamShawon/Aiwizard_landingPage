@@ -15,7 +15,7 @@ export default function Footer() {
             </p>
           </div>
           <a
-            href="https://www.fiverr.com/fusecode"
+            href="https://www.fiverr.com/aiwizard_"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -56,7 +56,7 @@ export default function Projects() {
   ];
 
   return (
-    <section className="xl:py-20 py-10 xl:px-0 px-2 plus-jakarta text-start">
+    <section className="lg:py-25 py-10 xl:px-0 px-2 plus-jakarta text-start">
       <div className="lg:w-full">
         {/* Section Header */}
         <div className="mb-22 lg:max-w-7xl mx-auto">

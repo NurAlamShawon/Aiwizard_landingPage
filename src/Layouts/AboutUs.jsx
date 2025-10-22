@@ -3,7 +3,7 @@ import About from '../Components/About'
 
 export default function AboutUs() {
   return (
-     <div className='relative xl:pb-30 pb-10' id='about'>
+     <div className='relative xl:pb-15 pb-10' id='about'>
         
     <About/>
     </div>

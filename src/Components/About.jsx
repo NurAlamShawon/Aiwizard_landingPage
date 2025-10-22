@@ -11,7 +11,7 @@ export default function About() {
   const ref = useRef();
   return (
     <section
-      className="relative  lg:max-w-7xl mx-auto overflow-hidden xl:py-30 py-10 xl:px-0 px-2"
+      className="relative  lg:max-w-7xl mx-auto overflow-hidden lg:py-25 py-5 xl:px-0 px-2"
       ref={ref}
     >
       <div className="relative z-10 ">

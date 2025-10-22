@@ -35,7 +35,7 @@ const teamMembers = [
 
 export default function TeamSection() {
   return (
-    <section className=" py-20 px-4 lg:px-20 bg-white plus-jakarta">
+    <section className=" py-20 px-4 lg:px-25 bg-white plus-jakarta">
       {/* Header */}
       <div className="flex lg:max-w-7xl mx-auto flex-col lg:flex-row items-center justify-between mb-12">
         <div className="mb-6 lg:mb-0">

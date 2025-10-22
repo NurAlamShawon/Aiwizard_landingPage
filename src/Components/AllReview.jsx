@@ -63,7 +63,7 @@ export default function AllReview() {
 
   return (
     <div
-      className="relative plus-jakarta lg:max-w-7xl mx-auto xl:py-20 py-10 xl:px-0 px-2"
+      className="relative plus-jakarta lg:max-w-7xl mx-auto lg:py-25 py-10 xl:px-0 px-2"
       ref={ref}
     >
       <div className="flex justify-between items-center">

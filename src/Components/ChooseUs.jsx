@@ -57,7 +57,7 @@ export default function ChooseUs() {
 
   return (
     <section
-      className="relative plus-jakarta xl:py-30 py-10  mx-2 lg:max-w-7xl xl:mx-auto"
+      className="relative plus-jakarta lg:py-25 py-10  mx-2 lg:max-w-7xl xl:mx-auto"
       ref={ref}
     >
       <div>

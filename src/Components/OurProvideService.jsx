@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Smartphone,
   Globe,
@@ -7,66 +7,78 @@ import {
   LayoutDashboard,
   Lightbulb,
 } from "lucide-react";
-import Doubledot from "./Doubledot";
+
 import { useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import Rounded from "./Rounded";
+import Card from "./Card";
+
 // ..
 AOS.init();
 
 export default function OurProvideService() {
   const ref = useRef();
-  const services = [
-    {
-      icon: (
-        <Smartphone className="h-6 w-6 text-[#01C561] group-hover:text-white" />
-      ),
-      title: "Mobile App UI/UX & Development",
-      description:
-        "From concept to code, I design and build mobile apps that are fast, intuitive, and visually engaging. Every screen is crafted for usability, performance, and real-world impact.",
-    },
-    {
-      icon: <Globe className="h-6 w-6 text-[#01C561] group-hover:text-white" />,
-      title: "AI-Driven Web App Development",
-      description:
-        "From concept to code, I design and build mobile apps that are fast, intuitive, and visually engaging. Every screen is crafted for usability, performance, and real-world impact.",
-    },
-    {
-      icon: (
-        <MessageSquare className="h-6 w-6 text-[#01C561] group-hover:text-white" />
-      ),
-      title: "AI Chatbot & Automation Integration",
-      description:
-        "From concept to code, I design and build mobile apps that are fast, intuitive, and visually engaging. Every screen is crafted for usability, performance, and real-world impact.",
-    },
-    {
-      icon: <Code className="h-6 w-6 text-[#01C561] group-hover:text-white" />,
-      title: "Full-Stack Web Development",
-      description:
-        "From concept to code, I design and build mobile apps that are fast, intuitive, and visually engaging. Every screen is crafted for usability, performance, and real-world impact.",
-    },
-    {
-      icon: (
-        <LayoutDashboard className="h-6 w-6 text-[#01C561] group-hover:text-white" />
-      ),
-      title: "Dashboard & Admin System Design",
-      description:
-        "From concept to code, I design and build mobile apps that are fast, intuitive, and visually engaging. Every screen is crafted for usability, performance, and real-world impact.",
-    },
-    {
-      icon: (
-        <Lightbulb className="h-6 w-6 text-[#01C561] group-hover:text-white" />
-      ),
-      title: "AI Consulting & Strategy",
-      description:
-        "From concept to code, I design and build mobile apps that are fast, intuitive, and visually engaging. Every screen is crafted for usability, performance, and real-world impact.",
-    },
-  ];
+  const upperRef = useRef(null);
+  const lowerRef = useRef(null);
+  const animationRef = useRef(null);
+
+  useEffect(() => {
+    AOS.init();
+
+    const upper = upperRef.current;
+    const lower = lowerRef.current;
+
+    let upperScroll = 0;
+    let lowerScroll = 0;
+    const speed = 0.4; // smooth and steady
+
+    function animateScroll() {
+      if (upper && lower) {
+        // Move continuously
+        upperScroll += speed;
+        lowerScroll -= speed;
+
+        // Wrap around seamlessly
+        const upperLimit = upper.scrollHeight / 2;
+        const lowerLimit = lower.scrollHeight / 2;
+
+        if (upperScroll >= upperLimit) {
+          upperScroll = 0;
+        }
+        if (lowerScroll <= 0) {
+          lowerScroll = lowerLimit;
+        }
+
+        upper.scrollTo(0, upperScroll);
+        lower.scrollTo(0, lowerScroll);
+      }
+
+      animationRef.current = requestAnimationFrame(animateScroll);
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          animationRef.current = requestAnimationFrame(animateScroll);
+        } else {
+          cancelAnimationFrame(animationRef.current);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+
+    return () => {
+      cancelAnimationFrame(animationRef.current);
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <section
-      className="lg:max-w-7xl mx-auto inter xl:overflow-hidden xl:py-30 py-10 xl:px-0 px-2"
+      className="lg:max-w-7xl mx-auto inter xl:overflow-hidden lg:py-25 py-10 xl:px-0 px-2"
       ref={ref}
     >
       <div className="xl:flex flex-row items-center justify-center gap-12">
@@ -87,69 +99,76 @@ export default function OurProvideService() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid gap-6 lg:w-[640px] grid-cols-1 lg:grid-cols-2 xl:pl-2">
-          {services.map((service, index) => (
-            <div
-              className="relative "
-              data-aos="fade-right"
-              data-aos-offset="200"
-              data-aos-easing="ease-in-sine"
-              data-aos-duration="600"
-              key={index}
-            >
-              {/* Card */}
-              <div
-                key={index}
-                className="group relative h-[346px] rounded-2xl border border-gray-300 bg-white p-6 transition-all hover:border-emerald-400 hover:bg-[#b9fdda] hover:shadow-lg"
-              >
-                <div
-                  className="
-          mb-4 inline-flex h-12 w-12 items-center justify-center 
-          rounded-full bg-[#E0FFEF] 
-          transition-all duration-300
-          group-hover:bg-[#01C561] group-hover:text-white
-        "
-                >
-                  {service.icon}
-                </div>
-                <div className="h-52">
-                  <h3 className="mb-3 plus-jakarta  text-lg font-semibold text-gray-900">
-                    {service.title}
-                  </h3>
-                  <p className="mb-4 text-sm inter leading-relaxed text-gray-600">
-                    {service.description}
-                  </p>
-                </div>
+        <div
+          className="lg:w-1/2 relative"
+          data-aos="fade-right"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="600"
+        >
+          {/* Fade overlays */}
+          <div className="absolute top-0 left-0 w-full h-20 bg-linear-to-b from-gray-50 to-transparent z-10 pointer-events-none"></div>
 
-                <div className="flex justify-between">
-                  <p></p>
-                  <a
-                    href="https://www.fiverr.com/aiwizard_"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-sm font-medium text-emerald-600 transition-colors hover:text-emerald-700"
-                  >
-                    <button className="text-black btn btn-outline rounded-3xl group-hover:bg-white">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={1.5}
-                        stroke="currentColor"
-                        className="size-5"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-                        />
-                      </svg>
-                    </button>
-                  </a>
-                </div>
+          <div className="grid grid-cols-2 gap-8 ">
+            {/* Column 1 */}
+            <div
+              ref={upperRef}
+              className="h-[820px] overflow-y-auto pr-2 scrollbar-hide"
+            >
+              <div className="space-y-6">
+                {/* duplicated list for smooth looping */}
+                {[...Array(2)].map((_, i) => (
+                  <React.Fragment key={i}>
+                    <Card
+                      icon={Smartphone}
+                      title="Mobile App UI/UX & Development"
+                      description="From concept to code, I design and build mobile apps that are fast, intuitive, and visually engaging. Every screen is crafted for usability, performance, and real-world impact."
+                    />
+                    <Card
+                      icon={Globe}
+                      title="AI-Driven Web App Development"
+                      description="From concept to code, I design and build mobile apps that are fast, intuitive, and visually engaging. Every screen is crafted for usability, performance, and real-world impact."
+                    />
+                    <Card
+                      icon={MessageSquare}
+                      title="AI Chatbot & Automation Integration"
+                      description="From concept to code, I design and build mobile apps that are fast, intuitive, and visually engaging. Every screen is crafted for usability, performance, and real-world impact."
+                    />
+                  </React.Fragment>
+                ))}
               </div>
             </div>
-          ))}
+
+            {/* Column 2 */}
+            <div
+              ref={lowerRef}
+              className="h-[820px] overflow-y-auto pr-2 scrollbar-hide"
+            >
+              <div className="space-y-6">
+                {[...Array(2)].map((_, i) => (
+                  <React.Fragment key={i}>
+                    <Card
+                      icon={Code}
+                      title="Full-Stack Web Development"
+                      description="From concept to code, I design and build mobile apps that are fast, intuitive, and visually engaging. Every screen is crafted for usability, performance, and real-world impact."
+                    />
+                    <Card
+                      icon={LayoutDashboard}
+                      title="Dashboard & Admin System Design"
+                      description="From concept to code, I design and build mobile apps that are fast, intuitive, and visually engaging. Every screen is crafted for usability, performance, and real-world impact."
+                    />
+                    <Card
+                      icon={Lightbulb}
+                      title="AI Consulting & Strategy"
+                      description="From concept to code, I design and build mobile apps that are fast, intuitive, and visually engaging. Every screen is crafted for usability, performance, and real-world impact."
+                    />
+                  </React.Fragment>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-gray-50 to-transparent z-10 pointer-events-none"></div>
         </div>
       </div>
     </section>
