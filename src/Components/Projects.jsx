@@ -23,34 +23,46 @@ export default function Projects() {
   const [isEnd, setIsEnd] = useState(false);
   const projects = [
     {
-      title: "Fashion E-Commerce App",
-      desc: "Clothing & Accessories Shopping App",
-      img: "https://i.postimg.cc/VLhYk4xH/Frame-2147225541.png",
+      title: "AI Social Networking App",
+      desc: "Smart social media app with personalized connections & real-time interactions",
+      img: "https://i.postimg.cc/05L4DG2Y/image.png",
       src: "https://www.fiverr.com/aiwizard_",
     },
 
     {
-      title: "AI Food Delivery Website",
-      desc: "Your go-to platform for discovering and purchasing the latest trends.",
-      img: "https://i.postimg.cc/y80wCPsw-/Frame-2147225541-2.png",
+      title: "Fashion E-Commerce App",
+      desc: "Stylish shopping app for clothing, shoes & accessories with smooth navigation and secure checkout",
+      img: "https://i.postimg.cc/8zbX2qBG/image.png",
       src: "https://www.fiverr.com/aiwizard_",
     },
     {
-      title: "Smart Messaging App with AI Chat Features",
-      desc: "Social Networking App with AI Features",
-      img: "https://i.postimg.cc/wjDSYVgn/Frame-2147225541-1.png",
+      title: "Healthcare Consultation App",
+      desc: "Smart mobile app for booking doctors, managing health records & accessing real-time medical guidance",
+      img: "https://i.postimg.cc/SR8DD5NC/image.png",
       src: "https://www.fiverr.com/aiwizard_",
     },
     {
-      title: "AI-Based Chatbot",
-      desc: "AI-Powered Chatbot Mobile App for Website Creation.",
-      img: "https://i.postimg.cc/8kJ4Q1PC/image.png",
+      title: "Interactive AI ChatBot App",
+      desc: "Real-time AI chat app with personalized responses, smart suggestions & a modern intuitive interface",
+      img: "https://i.postimg.cc/fTc8d6PS/image.png",
       src: "https://www.fiverr.com/aiwizard_",
     },
     {
-      title: "Video Editor Mobile App",
-      desc: "Your go-to platform for discovering and purchasing the latest trends.",
-      img: "https://i.postimg.cc/VkX3PRmW/Frame-2147225541-3.png",
+      title: "AI Mock Interview App",
+      desc: "AI-powered app for practicing interviews with real-time feedback to boost confidence & readiness",
+      img: "https://i.postimg.cc/vTWtWV0b/image.png",
+      src: "https://www.fiverr.com/aiwizard_",
+    },
+    {
+      title: "Video Editor App",
+      desc: "AI-powered video editing app with smart tools, smooth transitions & HD export optimization",
+      img: "https://i.postimg.cc/mrt3mqmr/image.png",
+      src: "https://www.fiverr.com/aiwizard_",
+    },
+    {
+      title: "AI Website Builder Chatbot App",
+      desc: "AI-driven chatbot that generates responsive websites from natural language prompts with real-time code updates",
+      img: "https://i.postimg.cc/qB8sD2xs/image.png",
       src: "https://www.fiverr.com/aiwizard_",
     },
   ];
@@ -169,7 +181,7 @@ export default function Projects() {
                         />
                       </div>
 
-                      <div className="flex items-center justify-between">
+                      <div className="lg:flex items-center justify-between">
                         {" "}
                         <div className="text-start">
                           {" "}
