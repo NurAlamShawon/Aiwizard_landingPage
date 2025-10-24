@@ -26,44 +26,44 @@ export default function Projects() {
       title: "AI Social Networking App",
       desc: "Smart social media app with personalized connections & real-time interactions",
       img: "https://i.postimg.cc/05L4DG2Y/image.png",
-      src: "https://www.fiverr.com/aiwizard_",
+      src: "https://www.fiverr.com/users/aiwizard_/portfolio/NjhlNzlkOWVmMWUzNmEwMDAxYWJmNWE1",
     },
 
     {
       title: "Fashion E-Commerce App",
       desc: "Stylish shopping app for clothing, shoes & accessories with smooth navigation and secure checkout",
       img: "https://i.postimg.cc/8zbX2qBG/image.png",
-      src: "https://www.fiverr.com/aiwizard_",
+      src: "https://www.fiverr.com/users/aiwizard_/portfolio/NjhlNzlmMjA3NTVhOGIwMDAxMTM1OWM4",
     },
     {
       title: "Healthcare Consultation App",
       desc: "Smart mobile app for booking doctors, managing health records & accessing real-time medical guidance",
       img: "https://i.postimg.cc/SR8DD5NC/image.png",
-      src: "https://www.fiverr.com/aiwizard_",
+      src: "https://www.fiverr.com/users/aiwizard_/portfolio/NjhlNzlmZTViMzQxY2UwMDAxMDJkODNh",
     },
     {
       title: "Interactive AI ChatBot App",
       desc: "Real-time AI chat app with personalized responses, smart suggestions & a modern intuitive interface",
       img: "https://i.postimg.cc/fTc8d6PS/image.png",
-      src: "https://www.fiverr.com/aiwizard_",
+      src: "https://www.fiverr.com/users/aiwizard_/portfolio/NjhlNjRhNjE2MzI1MjgwMDAxMmY1Njhj",
     },
     {
       title: "AI Mock Interview App",
       desc: "AI-powered app for practicing interviews with real-time feedback to boost confidence & readiness",
       img: "https://i.postimg.cc/vTWtWV0b/image.png",
-      src: "https://www.fiverr.com/aiwizard_",
+      src: "https://www.fiverr.com/users/aiwizard_/portfolio/Njg1MmQ0NDQ0YzVlMDMwMDAxNGEzZmU5",
     },
     {
       title: "Video Editor App",
       desc: "AI-powered video editing app with smart tools, smooth transitions & HD export optimization",
       img: "https://i.postimg.cc/mrt3mqmr/image.png",
-      src: "https://www.fiverr.com/aiwizard_",
+      src: "https://www.fiverr.com/users/aiwizard_/portfolio/Njg1MmNmMGE2ZWViZDcwMDAxMDEyYjUz",
     },
     {
       title: "AI Website Builder Chatbot App",
       desc: "AI-driven chatbot that generates responsive websites from natural language prompts with real-time code updates",
       img: "https://i.postimg.cc/qB8sD2xs/image.png",
-      src: "https://www.fiverr.com/aiwizard_",
+      src: "https://www.fiverr.com/users/aiwizard_/portfolio/Njg1MmQxOGE1ZGExMDkwMDAxZDA5N2Ew",
     },
   ];
 
