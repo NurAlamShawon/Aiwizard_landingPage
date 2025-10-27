@@ -7,29 +7,39 @@ AOS.init();
 // Sample team data
 const teamMembers = [
   {
-    name: "Maudud Ahmed",
-    role: "CEO at Fusecode",
-    img: "https://i.postimg.cc/HLxYRSXJ/Ellipse-2773.png",
+    name: "Ali Modasser Nayem",
+    role: "UI/UX designer",
+    img: "https://i.postimg.cc/tsNL1sVM/withbgprofile-Ali-Modasser-Nayem.jpg",
   },
   {
-    name: "Mehedi Hasan",
-    role: "Web Developer",
-    img: "https://i.postimg.cc/KYzGw9Bk/Ellipse-2770.png",
+    name: "Mohammad Rana Arju ",
+    role: "Backend Developer",
+    img: "https://i.postimg.cc/cvxFbXrD/DSC-1028-copy-Rana-Arju.png",
   },
   {
-    name: "Sagor",
-    role: "CEO at Aiwizard",
-    img: "https://i.postimg.cc/RVJW6tKx/Rectangle-23815.png",
+    name: "Shamsul Haque",
+    role: "Mobile app developer",
+    img: "https://i.postimg.cc/N2Gxz00X/6325792086443101186-Md-Shamsul-Haque-Sujon.jpg",
   },
   {
-    name: "Peter Simons",
-    role: "UI/UX Designer",
-    img: "https://i.postimg.cc/xdCfhsMN/Ellipse-2772.png",
+    name: "Md. Mostafizur Rahman Emon",
+    role: "Mobile app developer",
+    img: "https://i.postimg.cc/CdvCKS1W/Media-Md-Mostafizur-Rahman-Emon.jpg",
   },
   {
-    name: "Redwan Latif",
-    role: "UI/UX Designer",
-    img: "https://i.postimg.cc/MGT6NsVz/Ellipse-2769.png",
+    name: "Hasibul Islam",
+    role: "AI developer",
+    img: "https://i.postimg.cc/4YvmmQPt/Whats-App-Image-2025-10-24-at-16-28-42-800f9569-Hasibul-Islam.jpg",
+  },
+  {
+    name: "Md Abu Rayhan",
+    role: "Frontend Developer",
+    img: "https://i.postimg.cc/BXB0FYrz/Abu-Rayhan-Md-Abu-Rayhan.jpg",
+  },
+  {
+    name: "Rafioul Hasan Sourob",
+    role: "Backend Developer",
+    img: "https://i.postimg.cc/R33ygXDb/Pi7-Passport-Photo-1-Rafioul-Hasan-Sourob.jpg",
   },
 ];
 
@@ -88,7 +98,7 @@ export default function TeamSection() {
               <img
                 src={member.img}
                 alt={member.name}
-                className="w-50 h-50 object-cover rounded-full transition-all duration-500 group-hover:w-70 group-hover:h-70"
+                className="w-40 h-40 object-cover rounded-full transition-all duration-500 group-hover:w-60 group-hover:h-60"
               />
             </div>
             <div className="text-center mt-4">
