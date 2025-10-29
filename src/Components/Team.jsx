@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Rounded from "./Rounded";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
@@ -44,8 +44,53 @@ const teamMembers = [
 ];
 
 export default function TeamSection() {
+  const containerRef = useRef(null);
+  const scrollRef = useRef(null);
+  const animationRef = useRef(null);
+
+  useEffect(() => {
+    AOS.init();
+
+    const container = containerRef.current;
+    const scroller = scrollRef.current;
+    let scrollPos = 0;
+    const speed = 0.4; // Adjust for faster/slower horizontal speed
+
+    function animateScroll() {
+      if (scroller) {
+        scrollPos += speed;
+
+        const scrollWidth = scroller.scrollWidth / 2;
+        if (scrollPos >= scrollWidth) scrollPos = 0;
+
+        scroller.scrollTo({
+          left: scrollPos,
+          behavior: "auto",
+        });
+      }
+      animationRef.current = requestAnimationFrame(animateScroll);
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          animationRef.current = requestAnimationFrame(animateScroll);
+        } else {
+          if (animationRef.current) cancelAnimationFrame(animationRef.current);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (container) observer.observe(container);
+
+    return () => {
+      if (animationRef.current) cancelAnimationFrame(animationRef.current);
+      observer.disconnect();
+    };
+  }, []);
   return (
-    <section className=" py-20 px-4 lg:px-25 bg-white plus-jakarta">
+    <section className=" py-20 xl:px-0 px-4 lg:px-25 bg-white plus-jakarta">
       {/* Header */}
       <div className="flex lg:max-w-7xl mx-auto flex-col lg:flex-row items-center justify-between mb-12">
         <div className="mb-6 lg:mb-0">
@@ -85,28 +130,41 @@ export default function TeamSection() {
       </div>
 
       {/* Team Grid */}
-      <div
-        className="flex flex-wrap justify-center gap-20"
-        data-aos="fade-left"
-        data-aos-offset="200"
-        data-aos-easing="ease-in-sine"
-        data-aos-duration="600"
-      >
-        {teamMembers.map((member, i) => (
-          <div key={i} className="flex flex-col items-center group">
-            <div className="relative rounded-full overflow-hidden border-4 border-transparent transition-all duration-500 group-hover:border-green-500">
-              <img
-                src={member.img}
-                alt={member.name}
-                className="w-40 h-40 object-cover rounded-full transition-all duration-500 group-hover:w-60 group-hover:h-60"
-              />
-            </div>
-            <div className="text-center mt-4">
-              <h3 className="font-semibold text-gray-800">{member.name}</h3>
-              <p className="text-gray-500 text-sm">{member.role}</p>
-            </div>
-          </div>
-        ))}
+      <div ref={containerRef} className="relative overflow-hidden">
+        <div
+          ref={scrollRef}
+          className="flex space-x-20 overflow-x-auto scrollbar-hide"
+          data-aos="fade-left"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="600"
+        >
+          {/* duplicate list for smooth infinite scroll */}
+          {[...Array(2)].map((_, idx) => (
+            <React.Fragment key={idx}>
+              {teamMembers.map((member, i) => (
+                <div
+                  key={`${idx}-${i}`}
+                  className="flex flex-col items-center group flex-shrink-0"
+                >
+                  <div className="relative rounded-full overflow-hidden border-4 border-transparent transition-all duration-500 group-hover:border-green-500">
+                    <img
+                      src={member.img}
+                      alt={member.name}
+                      className="w-30 h-30 object-cover rounded-full transition-all duration-500 group-hover:w-45 group-hover:h-45"
+                    />
+                  </div>
+                  <div className="text-center mt-4">
+                    <h3 className="font-semibold text-gray-800">
+                      {member.name}
+                    </h3>
+                    <p className="text-gray-500 text-sm">{member.role}</p>
+                  </div>
+                </div>
+              ))}
+            </React.Fragment>
+          ))}
+        </div>
       </div>
     </section>
   );

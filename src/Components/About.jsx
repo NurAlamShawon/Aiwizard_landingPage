@@ -77,7 +77,7 @@ export default function About() {
             {/* 7+ Years */}
             <div className="relative px-13 py-15   text-end">
               <div className="xl:text-4xl text-xl font-bold text-gray-900 mb-2">
-                7+
+                3+
               </div>
               <div className="text-gray-600">Years Experience</div>
             </div>
